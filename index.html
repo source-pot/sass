@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8" />
+      <title>Styles</title>
+      <link rel="stylesheet" type="text/css" href="/css/main.css" />
+   </head>
+   <body class="layout-center">
+      <header>
+         <h1>Hello, world</h1>
+      </header>
+
+      <section class="jumbotron">
+         <h1>SourcePot's style</h1>
+         <p>The basic CSS file used with rough explanation on design decisions</p>
+      </section>
+
+      <article>
+         <p>Table of contents...</p>
+
+
+
+      </article>
+
+      <section class="jumbotron">
+         <h2>Components</h2>
+         <p>
+            Here we have blocks that are made up of several other elements to form a <em>component</em>. The general
+            rule for a component is that is has a "parent element" with a given class, and the child elements can then
+            have their own styles overwritten.
+         </p>
+      </section>
+
+      <article>
+         <h3>Jumbotron</h3>
+
+         <section class="jumbotron">
+            <h1>Jumbotrons are great</h1>
+            <p>They can draw your eye but they should be used sparingly as they take up a lot of space.</p>
+         </section>
+
+         <p>
+            A Jumbotron is fairly basic as components go, it's just a parent <code>.jumbotron</code> that adds the
+            background colour and some padding, then any child elements can be placed inside it.  It's useful for
+            title sections or areas where you want to draw attention to something.
+         </p>
+
+         <hr class="divider" />
+
+         <h3>Callout</h3>
+
+         <div class="callout">
+            <p>
+               This is a callout, useful for little bits of drama in the middle
+               of a page, or subject dividers, or mini-headers, whatever.
+            </p>
+         </div>
+
+         <p>
+            Another simple component, consisting of a <code>.callout</code> with any elements inside it.  Recommended
+            usage as above with just a paragraph or 2 of brief text.
+         </p>
+
+
+         <hr class="divider" />
+
+         <h3>Forms and their elements</h3>
+         <p>Form related elements <em>must</em> be enclosed in a <code>&lt;form&gt;</code> for their styles to propagate.</p>
+         <p>
+            Here you can see the default styling of a <code>&lt;fieldset&gt;</code> with enclosed <code>&lt;legend&gt;</code>,
+            I'll use that a lot on this form section.
+         </p>
+
+         <form>
+            <fieldset>
+               <legend>Radio and Checkbox groups</legend>
+
+               <p>A <code>ul.radio-group</code> styles labels with their radios in a neat column together.</p>
+               <ul class="radio-group">
+                  <li><label class="has-radio"><input type="radio" name="example-radio1">Option 1</label></li>
+                  <li><label class="has-radio"><input type="radio" name="example-radio1">Option 2</label></li>
+                  <li><label class="has-radio"><input type="radio" name="example-radio1">Option 3</label></li>
+                  <li><label class="has-radio"><input type="radio" name="example-radio1">Option 4</label></li>
+               </ul>
+
+               <p>Adding <code>.horizontal</code> to the group does something rather obvious</p>
+               <ul class="radio-group horizontal">
+                  <li><label class="has-radio"><input type="radio" name="example-radio2">Option 1</label></li>
+                  <li><label class="has-radio"><input type="radio" name="example-radio2">Option 2</label></li>
+                  <li><label class="has-radio"><input type="radio" name="example-radio2">Option 3</label></li>
+                  <li><label class="has-radio"><input type="radio" name="example-radio2">Option 4</label></li>
+               </ul>
+
+               <p>The same applies for checkboxes (with the <code>.checkbox-group</code> class)</p>
+               <ul class="checkbox-group">
+                  <li><label class="has-checkbox"><input type="checkbox">Check 1</label></li>
+                  <li><label class="has-checkbox"><input type="checkbox">Check 2</label></li>
+                  <li><label class="has-checkbox"><input type="checkbox">Check 3</label></li>
+                  <li><label class="has-checkbox"><input type="checkbox">Check 4</label></li>
+               </ul>
+
+               <p>And with <code>.horizontal</code> layout</p>
+               <ul class="checkbox-group horizontal">
+                  <li><label class="has-checkbox"><input type="checkbox">Check 1</label></li>
+                  <li><label class="has-checkbox"><input type="checkbox">Check 2</label></li>
+                  <li><label class="has-checkbox"><input type="checkbox">Check 3</label></li>
+                  <li><label class="has-checkbox"><input type="checkbox">Check 4</label></li>
+               </ul>
+            </fieldset>
+
+            <fieldset>
+               <legend>Inputs, Textareas, Selects</legend>
+
+               <p>
+                  By default, labels and inputs don't have a fixed width, browser defaults will come into play.
+                  However, if you wrap a label/input or label/textarea combo inside a <code>div.input-group</code>
+                  the input or textarea will take up as much space as possible up to the label.  This can be controlled
+                  easily by setting an explicit width on the label itself.
+               </p>
+
+               <p>Enclosed in a paragraph</p>
+               <p>
+                  <label for="test-input-1">Name</label>
+                  <input id="test-input-1" type="text" placeholder="Your name here" />
+               </p>
+
+               <p>Enclosed in a <code>div.input-group</code></p>
+               <div class="input-group">
+                  <label for="test-input-2">Name</label>
+                  <input id="test-input-2" type="text" placeholder="Your name here" />
+               </div>
+
+               <div class="input-group">
+                  <label for="test-textarea-1">Description</label>
+                  <textarea id="test-textarea-1" placeholder="Describe yourself"></textarea>
+               </div>
+
+               <div class="input-group">
+                  <label for="test-select-1">Favourite food</label>
+                  <select id="test-select-1">
+                     <option>Chicken and Mushroom risotto</option>
+                     <option>Penne Carbonara</option>
+                     <option>Pepperoni pizza</option>
+                     <option>Turkey dinosaurs</option>
+                  </select>
+               </div>
+
+            </fieldset>
+         </form>
+
+         <hr class="divider" />
+      
+         <h3>Table</h3>
+
+         <p>
+            The <code>&lt;table &gt;</code> element should be used to display tabular data <em>only</em> and not for 
+            layout or any other use.  Therefore we decided to automatically apply styles directly to the table element 
+            rather than have a separate class to add these styles.
+         </p>
+
+         <table>
+            <thead>
+               <tr>
+                  <th>#</th>
+                  <th>Item</th>
+                  <th>Category</th>
+                  <th>Quantity</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>1</td>
+                  <td>Banana</td>
+                  <td>Fruit</td>
+                  <td>356</td>
+               </tr>
+               <tr>
+                  <td>2</td>
+                  <td>Orange</td>
+                  <td>Fruit</td>
+                  <td>144</td>
+               </tr>
+               <tr>
+                  <td>3</td>
+                  <td>Cucumber</td>
+                  <td>Vegetable</td>
+                  <td>96</td>
+               </tr>
+               <tr>
+                  <td>4</td>
+                  <td>Tomato</td>
+                  <td>Vegetable</td>
+                  <td>404</td>
+               </tr>
+            </tbody>
+            <tfoot>
+               <tr>
+                  <td colspan="3" class="text-align-right"><em>Total</em></td>
+                  <th>1000</th>
+               </tr>
+            </tfoot>
+         </table>
+      </article>
+
+      <section class="jumbotron">
+         <h2>Utility classes</h2>
+         <p>These help you do everyday things like change text alignment or add emphasis</p>
+      </section>
+
+      <article>
+         <h4>Text classes</h4>
+         <p class="text-align-left"><code>.text-align-left</code></p>
+         <p class="text-align-center"><code>.text-align-center</code></p>
+         <p class="text-align-right"><code>.text-align-right</code></p>
+
+         <p>
+            Add <span class="text-underline">underlines</span> to text for emphasis.  These are added using either the
+            standard <code>&lt;u&gt;</code> element or <code>.underline</code> class.
+         </p>
+
+         <h4>Fixed width classes</h4>
+
+         <p>Fixed widths for elements with a few arbitrary percentages: every 20% and every 25%</p>
+
+         <div class="callout w-100">w-100</div>
+         <div class="callout w-80">w-80</div>
+         <div class="callout w-60">w-60</div>
+         <div class="callout w-40">w-40</div>
+         <div class="callout w-20">w-20</div>
+         <div class="callout w-75">w-75</div>
+         <div class="callout w-50">w-50</div>
+         <div class="callout w-25">w-25</div>
+
+      </article>
+   </body>
+</html>
