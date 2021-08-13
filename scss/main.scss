@@ -1,0 +1,58 @@
+
+// Roboto Slab, Roboto Mono, and Roboto "normal"
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto+Slab&family=Roboto:ital,wght@0,300;0,500;1,300;1,500&display=swap');
+
+
+@import './reset.scss';
+@import './colours.scss';
+@import './layout.scss';
+@import './utility.scss';
+
+@import './components/callout.scss';
+@import './components/form.scss';
+@import './components/hr.scss';
+@import './components/jumbotron.scss';
+@import './components/table.scss';
+
+
+html
+{
+   font-size: 16px;
+   background: $body-background;
+}
+
+
+// everything that needs its font resetting should be listed here
+body, table, input, button, textarea
+{
+   font-size: 1rem;
+   font-family: Roboto, sans-serif;
+   font-weight: 300;
+}
+
+// some elements might need their font-weight resetting
+
+b, strong, .bold
+{
+   font-weight: 500;
+}
+
+h1, h2, h3, h4, h5, h6, th
+{
+   font-family: 'Roboto Slab', serif;
+}
+
+code, pre, .fixed-width
+{
+   font-family: 'Roboto Mono', monospace;
+}
+
+header
+{
+   border-bottom: 4px solid;
+}
+
+article, form
+{
+   background-color: $content-background;
+}

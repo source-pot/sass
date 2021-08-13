@@ -1,0 +1,16 @@
+
+/*
+   A Jumbotron is a BIG block with a coloured background.
+   It can optionally hold a large title and some other text.
+   Use it to draw attention to a section of a page.
+*/
+
+.jumbotron
+{
+   padding: 2rem;
+   background-color: $theme-colour-3;
+
+   h1,h2,h3,h4,h5,h6 {
+      margin-top: 0;
+   }
+}
