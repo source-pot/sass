@@ -1,0 +1,40 @@
+
+/*
+   reset.scss
+   Contains styles to reset browsers to standard behaviours
+*/
+
+html, body
+{
+   margin: 0;
+   padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+   margin: 1rem 0;
+}
+
+table
+{
+   border-collapse: collapse;
+}
+
+h1 {
+   font-size: 2rem;
+}
+h2 {
+   font-size: 1.75rem;
+}
+h3 {
+   font-size: 1.5rem;
+}
+h4 {
+   font-size: 1.25rem;
+}
+h5 {
+   font-size: 1rem;
+}
+h6 {
+   // 0.75 seemed a bit too small
+   font-size: 0.8rem;
+}

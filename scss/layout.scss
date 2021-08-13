@@ -1,0 +1,22 @@
+
+/*
+   Layout defines sizes for the body and parts contained within
+*/
+
+
+body
+{
+   max-width: 1000px;
+   margin: 0 1rem;
+}
+
+body.layout-center
+{
+   margin: 0 auto;
+}
+
+article
+{
+   padding: 1rem 2rem;
+}
+

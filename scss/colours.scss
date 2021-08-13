@@ -1,0 +1,26 @@
+
+/*
+   List of all colours
+*/
+
+// $theme-colour-1: salmon;
+// $theme-colour-2: #00A2BE;
+
+
+$theme-colour-1: #ff58a0;
+$theme-colour-2: #58e9ff;
+$theme-colour-3: #ffdb58;
+
+$body-background: linear-gradient( to right, $theme-colour-1, $theme-colour-2);
+$content-background: white;
+
+$fieldset-border: #ddd;
+$input-background: #ddd;
+$input-border-colour: $theme-colour-1;
+$checkbox-label-background: #eee;
+
+$jumbotron-background: #eee;
+
+// $callout-background: linear-gradient( to right, $theme-colour-2, $theme-colour-1);
+$callout-background-colour: lighten( $theme-colour-1, 20% );
+$callout-border-colour: $theme-colour-2;
