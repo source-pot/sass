@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto+Slab&family=Roboto:ital,wght@0,300;0,500;1,300;1,500&display=swap");
+/*
+   reset.scss
+   Contains styles to reset browsers to standard behaviours
+*/
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 1rem 0;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 0.8rem;
+}
+
+/*
+   List of all colours
+*/
+/*
+   Layout defines sizes for the body and parts contained within
+*/
+body {
+  max-width: 1000px;
+  margin: 0 1rem;
+}
+
+body.layout-center {
+  margin: 0 auto;
+}
+
+article {
+  padding: 1rem 2rem;
+}
+
+.text-align-left {
+  text-align: left;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.text-underline, u {
+  text-decoration: none;
+  border-bottom: 1px solid #58e9ff;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.w-80 {
+  width: 80%;
+}
+
+.w-60 {
+  width: 60%;
+}
+
+.w-40 {
+  width: 40%;
+}
+
+.w-20 {
+  width: 20%;
+}
+
+.w-75 {
+  width: 75%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-25 {
+  width: 25%;
+}
+
+/*
+   A callout is a big element with a background colour and a thick left border
+*/
+.callout {
+  box-sizing: border-box;
+  border-left: 5px solid #58e9ff;
+  background-color: #eee;
+  border-radius: 5px;
+  padding: 0.5rem 0.25rem;
+  margin: 0.5rem 0;
+}
+.callout p:first-child {
+  margin-top: 0;
+}
+.callout p:last-child {
+  margin-bottom: 0;
+}
+
+/*
+   Anything related to HTML Forms go in here
+*/
+form fieldset {
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  margin: 1rem 0;
+}
+form fieldset legend {
+  padding: 0.25rem 0.5rem;
+  border: 2px solid #ddd;
+  border-radius: 3px;
+}
+form fieldset label {
+  padding-right: 1rem;
+}
+form fieldset label.has-checkbox, form fieldset label.has-radio {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+}
+form fieldset label.has-checkbox:hover, form fieldset label.has-radio:hover {
+  background-color: #eee;
+  border-radius: 3px;
+}
+form fieldset label.has-checkbox input[type=radio], form fieldset label.has-checkbox input[type=checkbox], form fieldset label.has-radio input[type=radio], form fieldset label.has-radio input[type=checkbox] {
+  margin-right: 0.5rem;
+}
+form fieldset input, form fieldset textarea, form fieldset select {
+  border: 2px solid #ddd;
+  border-radius: 3px;
+  padding: 0.25rem 0.5rem;
+}
+form fieldset input:focus, form fieldset textarea:focus, form fieldset select:focus {
+  outline: none;
+  border-color: #ff58a0;
+}
+form .input-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+form .input-group:not(:last-child) {
+  padding-bottom: 1rem;
+}
+form .input-group input, form .input-group textarea, form .input-group select {
+  flex-grow: 1;
+}
+form ul.radio-group, form ul.checkbox-group {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+form ul.radio-group li, form ul.checkbox-group li {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+form ul.horizontal {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+hr.article-divider {
+  margin: 1rem -2rem;
+  border: none;
+  background-color: #58e9ff;
+  height: 5px;
+}
+
+hr.divider {
+  width: 50%;
+  margin: 1rem auto;
+  background-color: #58e9ff;
+  height: 5px;
+  border: none;
+}
+
+/*
+   A Jumbotron is a BIG block with a coloured background.
+   It can optionally hold a large title and some other text.
+   Use it to draw attention to a section of a page.
+*/
+.jumbotron {
+  padding: 2rem;
+  background-color: #ffdb58;
+}
+.jumbotron h1, .jumbotron h2, .jumbotron h3, .jumbotron h4, .jumbotron h5, .jumbotron h6 {
+  margin-top: 0;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0;
+}
+table th, table td {
+  text-align: left;
+  padding: 0.25rem 0.5rem;
+}
+table thead tr th, table thead tr td {
+  border-bottom: 2px solid #ff58a0;
+}
+table tfoot tr th, table tfoot tr td {
+  border-top: 2px solid #ff58a0;
+}
+
+html {
+  font-size: 16px;
+  background: linear-gradient(to right, #ff58a0, #58e9ff);
+}
+
+body, table, input, button, textarea {
+  font-size: 1rem;
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
+}
+
+b, strong, .bold {
+  font-weight: 500;
+}
+
+h1, h2, h3, h4, h5, h6, th {
+  font-family: "Roboto Slab", serif;
+}
+
+code, pre, .fixed-width {
+  font-family: "Roboto Mono", monospace;
+}
+
+header {
+  border-bottom: 4px solid;
+}
+
+article, form {
+  background-color: white;
+}
